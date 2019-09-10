@@ -1,77 +1,100 @@
-body {
-  width: 100%;
-  float: left;
-  height: 100%;
+html {
+/*  width: 1000px;
+  height: 1500px;*/
+  width:100%;
+  height:100%;
+  margin:0;
+  padding: 0px;
+  /*overflow-x:hidden;*/
 }
+
+body {
+/*  width: 1000px;
+  height: 1500px;*/
+  width:100%;
+  height:100%;
+  margin:0;
+  padding: 0px;
+  /*overflow-x:hidden;*/
+}
+
+/*html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}*/
 
 .topbar{
   width: 100%;
   float: left;
   height: 100px;
-  background-color:#ff7777;
+  background-color:#800000;
 }
 
-.topbar > ul{display:table;width:100%;}
+.topbar > ul{display:table;width:95%;}
 .topbar > ul > li{list-style:none;margin:0;padding:0;display:table-cell;}
 
 .content_window{
   width: 100%;
   float: left;
   height: calc(100% - 200px);
-  background-color:#ffffff;
+  background-color:#800000;
 }
+
+/*this is behind the content section, not visible*/
+
 
 .sidebar{
   width: 200px;
   float: left;
   height: 100%;
-  background-color:#990000;
+  background-color:#800000;
 }
+
+.sidebar > ul > li{list-style-type:none;}
 
 
 .content{
   width: calc(100% - 200px);
   float: left;
   height: 100%;
-  background-color:#fffff9;
+  background-color:#facfbf;
+  /*min-width:800px;*/
+  max-width:1500px;
 }
-
 
 .bottombar{
   width:100%;
   height:100px;
-  background-color:#ff7777;
+  background-color:#800000;
   float:left;
 }
 
-.bottombar > ul{display:table;width:100%;}
+.bottombar > ul{display:table;width:95%;}
 .bottombar > ul > li{list-style:none;margin:0;padding:0;display:table-cell;}
 
-/*.class1{
-  width: 33.33%;
-  float: left;
-  height: 50vh;
+
+a {
+  color:#9999ff;
 }
 
-.class2{
-  width: 33.33%;
-  float: left;
-  height: 50vh;
-}
+.content-link{color:#3333ff;}
 
-.class3 {
-  width: 33.33%;
-  float: left;
-  height: 50vh;
+.center {
+ text-align: center
 }
-
-.class4{
-  width: 33.33%;
-  float: left;
-  height: 50vh;
-}*/
 
 p {
   padding-top: 25px;
   text-align: center;
 }
+
+/*
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}*/
