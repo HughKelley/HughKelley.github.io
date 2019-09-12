@@ -97,6 +97,10 @@ p {
   text-align: center;
 }
 
+.bottom-text {
+  color:white;
+}
+
 /*
 * {
   background: #000 !important;
