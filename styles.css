@@ -64,6 +64,11 @@ body {
   background-color:#facfbf;
   /*min-width:800px;*/
   max-width:1500px;
+  overflow: scroll;
+}
+
+.content > div > h3{
+  text-align: center
 }
 
 .bottombar{
