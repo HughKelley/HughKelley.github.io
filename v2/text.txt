@@ -1,0 +1,1 @@
+text file placeholder for version 2 folder because git ignores empty subdirectories
