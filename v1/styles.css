@@ -74,6 +74,7 @@ body {
 .content > div > p{
   text-align: left;
   color:#2b0000;
+  padding:10px;
 }
 
 .content > div > p > a{
