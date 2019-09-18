@@ -65,6 +65,7 @@ body {
   /*min-width:800px;*/
   max-width:1500px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .content > div > h3{
