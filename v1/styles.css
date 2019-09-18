@@ -65,19 +65,28 @@ body {
   /*min-width:800px;*/
   max-width:1500px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .content > div > h3{
-  text-align: center
+  text-align: center;
+}
+
+.content > div > h4{
+  text-align:left;
+  font-weight:normal;
+  font-style:italic;
 }
 
 .content > div > p{
   text-align: left;
   color:#2b0000;
+  padding:10px;
 }
 
 .content > div > p > a{
   color:#3333ff;
+  text-decoration:none;
 }
 
 
