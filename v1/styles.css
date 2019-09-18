@@ -68,7 +68,13 @@ body {
 }
 
 .content > div > h3{
-  text-align: center
+  text-align: center;
+}
+
+.content > div > h4{
+  text-align:left;
+  font-weight:normal;
+  font-style:italic;
 }
 
 .content > div > p{
