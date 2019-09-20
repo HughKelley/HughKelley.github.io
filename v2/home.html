@@ -3,9 +3,116 @@
    <HEAD>
       <TITLE>
          hugh
-      </TITLE>
+      </TITLE>    
+               <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+        <style type="text/css">
+          .basic {  border: 5px solid;
+                    border-radius:15px;
+                    border-color:grey;
+                    /*overrides the body color:white below*/
+                    outline-style: solid;
+                    outline-color:maroon;
+                    /* outline goes around the section divs*/
+                    margin:10px;
+                    padding:10px;
+                    overflow:hidden;
+
+                    background:grey;
+                    /*height:500px;*/
+                  }
+
+          .header-section {
+            background:maroon;
+            overflow:hidden;
+          }
+
+          body {
+                    background:maroon;
+                    color:white;
+                    border-color:white; 
+                    /*this border color attribute has no effect currently, all handled by class basic*/
+                }
+        </style>
    </HEAD>
 <BODY>
+  <div> 
+    <nav style="background:grey;color:maroon;" class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">hugh</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#number1">About</a></li>
+          <li><a href="#number2">Work</a></li>
+          <li><a href="#number3">Fun</a></li>
+          <li><a href="#number4">School</a></li>
+          <li><a href="#number5">Life</a></li>
+          <li><a href="#number6">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+<div id = "number1" class="header-section" class="basic" class="container-fluid" style="">
+  <!-- <div class="container" style="width:50%;height:90%;border-style:solid;float:left;"> -->
+  <!-- <p> Test text for image container</p> -->
+  <img src="../v1/me.jpg" alt="image of hugh" style="margin-left:20px;width:25%;float:left;">
+  <!-- </div> -->
+    <div class="container-fluid" style="vertical-align:middle;width:70%;margin-left:20px;float:left;">
+      <p>
+        Hi, I'm Hugh
+      </p>
+      <p>
+        I'm interested in programming, data analysis especially of a spatial nature, making software and cities work better for their least powerful users and repairing mechanical things. 
+      </p> 
+      <p> 
+        Don't hesitate to reach out to say hi, tell me how you found this site, ask a question or tell me why I'm wrong about something. 
+      </p>
+      <p>
+        One of the main goals of this site is my effort to control my personal data myself and to make data about my life available to other people. 
+
+        Over time I hope to have the majority of my exercise data, travel data, spending data and anything else I can think of up here for your enjoyment.  
+      </p>
+      <p>
+
+        One of the things that prompted me to do this was thinking about who I'm most comfortable having information about my life.
+
+        If you're reading this, I'm probably much more comfortable with you knowing a lot about me than I am with Facebook or Google or the US government. 
+
+        I tend to think that any data that's collected should be available to all. 
+      </p>
+      <p>
+        we'll see if I come to regret that. 
+      </p>
+  </div>
+</div>
+<div id="number2" class="basic" class="container-fluid">
+<p>Work </p>
+</div>
+<div id="number3" class="basic" class="container-fluid">
+<p>Fun</p>
+</div>
+<div id = "number4" class="basic" class="container-fluid">
+<p>School</p>
+</div>
+<div id="number5" class="basic">
+<p>Life</p>
+</div>
+<div id="number6" class="basic">
+<p>Blog</p>
+<p>I write some book/movie reviews and some random thoughts at my blog <a href="">here</a>
+</div>
+
+
+
+
 	<div style="text-align:center;">
 	<h3>
    		Version 2
