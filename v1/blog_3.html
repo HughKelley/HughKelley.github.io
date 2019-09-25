@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+   <HEAD>
+      <TITLE>
+         hugh: blog
+      </TITLE>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+
+   </HEAD>
+<BODY>
+    <div class="topbar">
+      <div><center><h2 style="color:#f4c430">Hugh</h2></div>
+      <ul>
+        <li><a href="https://hughkelley.github.io/">Site</a></li>
+        <!-- The spacing gets weird for multi-word content... -->
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="school.html">School</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="play.html">Play</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="misc.html">Misc</a></li>
+      </ul>
+    </div>
+    <div class="content_window">
+      <div class="sidebar">
+        <!-- <center> -->
+        <p class="center" style="color:#f4c430">Content Navigation</p>
+        <ul>
+          <center>
+          <li style="list-style-type:none"><a href="home.html">version 1</a></li>
+          <li style="list-style-type:none"><a href="../v2/home.html">version 2</a></li>
+          <li style="list-style-type:none"><a href="../v3/home.html">version 3</a></li>
+          <li style="list-style-type:none"><a href="../v4/home.html">version 4</a></li>
+          <li style="list-style-type:none"><a href="../v5/home.html">version 5</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div style="padding:10px;" >
+<!-- ------------------------------- Content starts here ------------------------------------ -->
+<h3> 
+  <!-- title -->
+  Lessons Learned Implementing Solutions to the Maximum Subarray Problem
+</h3>
+
+<p>
+  The maximum subarray problem is a great way to learn how to solve difficult problems in computer programming. Because there are three basic solution types, of increasing levels of difficulty and computational efficiency. This is a particularly useful example to work through because it is not a problem that you (if you're anything like me) are likely to imagine a solution to yourself. Thus for the work to be useful, you have to find someone else's solution and implement it in a way that you actually understand yourself. 
+</p>
+<p>
+  There are plenty of solutions online, but what is a good middle ground between just using someone else's code and being unable to come up with a solution that challenged professional computer scientists. 
+</p>
+<p>
+  The "levels" of the problem are the O(n<sup>2</sup>) solution, the O(nlog(n)) solution and the O(n) solution. These are the brute force method, Kadane's algorithm, and the divide and conquer approach. To be fair, the divide and conquer approach is both more difficult to understand and less optimal compared to Kadane's algorithm. Leetcode calls it "more subtle". 
+</p>
+<p>
+  Across solutions, I found it really helpful to have an example array and to draw out each subarray that was tested in order to understand how subarrays were eliminated as possibilities without having to calculate their sums. 
+</p>
+<p>
+  To start, implement a basic solution to the max sub array problem. the next paragraph will describe how to do this. 
+</p>
+
+<h4> 
+  Brute Force
+</h4>
+<p>The brute force method is simply to calculate the sum of every possible subset of the array, returning the indices or sum of the subset with the largest resulting sum. To do this, loop through the positions of the array. for each position, loop through the array again. the second loop should only loop through the array starting from the index of the first for loop. that is to say, ensure that the first index is always less than or equal to the second index value. 
+</p>
+
+<p>
+  In leetcode, this solution will not meet the time standard for a working solution. That requires at least Kadane's algorithm. 
+</p>
+
+
+<h4> 
+  Kadane's Algorithm
+</h4>
+<p>
+  Kadane's Algorithm focuses on calculating the endpoints of the maximum subarray. If the sum of negative values between two positive values is greater than one or both of the positive values, then the solution will not use both of the positive values. 
+</p>
+
+<h4>
+  Divide and Conquer
+</h4>
+<p>
+the divide and conquer approach was the most difficult for me to get my head around. The basic idea is that for a given index of the array, the optimal solution will exist in one of three places, entirely to the left of the index, entirely to the right of the index, or including the index. 
+</p>
+
+<!-- ------------------------------- Content ends here   ------------------------------------- -->
+
+        </div>
+      </div>
+    </div>
+    <div class="bottombar">
+      <h4 style="color:#f4c430" class="center">Contact</h4>
+      <ul>
+        <li><a href="hghklly@gmail.com">hghklly@gmail.com</a></li>
+        <li> <a href="https://stackoverflow.com/users/3033634/hugh-kelley"><img src="s_o.png" alt="S/O" height = '20px'></a></li>
+        <li><a href="https://github.com/HughKelley/HughKelley.github.io"><img src="ghub.png" alt="github logo" height="20px"></a></li>
+        <li><a href="https://twitter.com/HughKelley15"><img src="twtr.png" alt="twitter logo" height = "20px"></a></li>
+      </ul>
+    </div>
+
+
+
+<!-- <div style="float;left;width:300px;display:inline;height:100vh;border:">
+  How to get the div to be the full height of the window?
+</div> -->
+<!-- 
+<span style="width:150px;height:100px;background-color:red;" > first span test </span> -->
+
+<!-- <span style="width:600px;background-color:blue;" > second span test
+  <br>
+
+  second span second line test. 
+
+</span>
+
+<span>  -->
+
+
+
+<!-- <div class=top>
+  <span>
+    <p> test text</p>
+  </span>
+  <span>
+    <p> test text</p>
+  </span>
+</div>
+
+
+<div class=test> 
+  <p> test text</p>
+</div> -->
+
+
+
+<!-- 
+   <H2>Hi!</H2>
+   <P>Thanks for visiting my page</P>
+
+
+  <H1> Plans </H1>
+
+<p>the plan is to build a personal website with only HTML and CSS
+
+Once that's basically done, I'll add in some fancy stuff. 
+
+ </p>
+
+<h1>Links </h1>
+
+<p>
+<a href="work.html">link to work page</a>
+<br>
+<a href="education.html">link to edu page</a>
+
+
+
+</p>
+
+</span>
+ -->
+
+<!--   <div id="like_button_container"></div>-->
+
+
+
+     <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+<!--  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>-->
+<!--  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>-->
+
+  <!-- Load our React component. -->
+<!--  <script src="like_button.js"></script> -->
+     
+</BODY>
+</HTML>
