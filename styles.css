@@ -1,0 +1,32 @@
+.basic {  /*border: 5px solid;
+          border-radius:15px;
+          border-color:grey;*/
+          /*overrides the body color:white below*/
+          outline-style: solid;
+          outline-color:#800000;
+          /* outline goes around the section divs*/
+          margin:10px;
+          padding:10px;
+          overflow:hidden;
+          color:#000000;
+          background:#facfbf;
+          /*height:500px;*/
+        }
+
+.header-section {
+  background:#800000;
+  overflow:hidden;
+}
+
+body {
+          background:#800000;
+          color:grey;
+          border-color:white; 
+          /*this border color attribute has no effect currently, all handled by class basic*/
+      }
+
+.sect_head{
+  /* style for the head of a section*/
+
+  
+}
