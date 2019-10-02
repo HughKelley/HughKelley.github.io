@@ -1,6 +1,6 @@
-.basic {    border: 5px solid;
+.basic {   /* border: 5px solid;
             border-radius:15px;
-            border-color:grey;
+            border-color:grey;*/
             /*overrides the body color:white below*/
             outline-style: solid;
             outline-color:#800000;
@@ -10,14 +10,24 @@
             overflow:hidden;
             background:#facfbf;
             /*height:500px;*/
+            color:black;
         }
 
 .header-section {   background:#800000;
                     overflow:hidden;
                 }
 
-body {  background:#800000;
-        color:grey;
-        border-color:white; 
+body {  background:#a9a9a9;
+        color:white;
+        border-color:white;
         /*this border color attribute has no effect currently, all handled by class basic*/
     }
+
+.content-frame{
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    background:#800000;
+}
+
+.basic > h3{font-size:small;}
