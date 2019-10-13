@@ -55,6 +55,16 @@
 <h3>
 Getting Started with Magit
 </h3>
+<h4>
+  To Do
+</h4>
+<p>
+  Write steps
+  Test procedure myself
+  Add pictures
+  Format Code
+  Link to magit docs
+</p>
 <p>
   Magit is a useful tool because it offers a better interface than git at the command line, allowing more information to be available at a given time, an interactive "status" page than what you get at the command line for instance. It doesn't have the downsides of full GUI git clients like Github desktop though, difficulty seeing the relationship between local and remote for instance.
 
@@ -105,16 +115,44 @@ Getting Started with Magit
   Now that the repo is cloned we can access magit using the more standard approach, running magit-status from a file or directory within the repo using the C-x g keybinding we set up earlier. Once you're in the magit buffer, type b, the branch prefix, and you'll see a list of options for working with branches. Type c to create a new branch. First, you're asked what state the new branch should start from. In this case start from "master" but it's possible you might want to start from "dev" or another like "issue_1". So type mast, use tab to autocomplete and when asked, name the new branch "test".
 </p>
 <p>
-  Now in the magit buffer, you'll see that "head" is at the "test" branc at the last commit to the "master" branch that we created the test branch from.
+  Now in the magit buffer, you'll see that "head" is at the "test" branch at the last commit to the "master" branch that we created the test branch from. Repeat this procedure so that you have three branches, master, test, and test_1 and head is on test_1. 
 </p>
 <p>
-  Now open the README.md file in the repo using C-x C-f and navigating to the file's path from wherever emacs starts you. Make some change to the readme file, for instance adding the text "change 1".
+  Now open the README.md file in the repo using C-x C-f and navigating to the file's path from wherever emacs starts you. Make some change to the readme file, for instance adding the text "change 1" below the repo name.
 </p>
 <P>
-  Now return to magit, check the repo status and save the file ytou just edited with a single command, C_x g. You'll be asked to save the file, type y, and after a pause, shown the magit buffer with a single unstaged file, README.md.
+  Now return to magit, check the repo status and save the file you just edited with a single command, C_x g. You'll be asked to save the file, type y, and after a pause, shown the magit buffer with a single unstaged file, README.md.
 </p>
 <p>
-  Bring your cursor to the line of the unstaged file and press s to stage it. AFter a pause, put the cursor on the file again, now under staged files and type u which is how you can unstage a file. Stage that file again with s, and then begin the commit process but typing c with the cursor on the staged file.  
+  Bring your cursor to the line of the unstaged file and press s to stage it. After a pause, put the cursor on the file again, now under staged files and type u which is how you can unstage a file. Stage that file again with s, and then begin the commit process by typing c with the cursor on the staged file. You'll see what is now a hopefully familiar list of suffix options and complete the commit command by typing another c. Magit then runs the git "diff" function on the files staged and presents you with two buffers. One will show the output of diff for the file with your new line in green. The other will offer you the chance to add a commit message. Add a brief message and finish the commit using C-c C-c. (The C-c C-c command is a common way to complete a message like this across emacs modes, Org-mode uses it too for instance.)
+
+<p>
+  The next step is to push the new commit. Begin this by typing the prefix P which pulls up the menu of suffix options. The two important options to be aware of are the p push to remote option and the u upstream option. This distinction is often missed using git from a terminal emulator but it's very useful to learn, particularly if you are contributing to a relatively large project that will probably more ahead of you while you are working on an issue. 
+
+  The remote is meant to be the remote copy of your new local branch. Upstream is meant to be the branch that your current local branch evolves from. Chances are that whatever branch you used as the beginning of the current branch when you created it is the branch you want as upstream remote.
+</p>
+<p> type p to push remote, setting that. Magit will ask for input and type org and hit tab. It should autocomplete to "origin". Hit enter/RET and magit will push your changes to the remote repo, creating a new branch on the remote, named after the local branch that you're pushing from. To confirm this. open github in a webbrowser and look at the branches in your repo. There should be a new branch called test_1.
+<p>
+  Open a pull request in github to merge test_1 into master and use your write privileges to confirm the merge. This leaves us with a change to remote that we don't have locally. Return to emacs.
+</p>
+<p>
+  In emacs, open the magit buffer for the repo again.  Checkout the master branch if needed and fetch changes from the remote repo using f p. That will bring your master branch up to date with the remote master branch, and the local and remote test_1 branches.
+
+</p>
+<p>
+  Now imagine that we want to work on the issue that the original test branch is intended for. The current state is that there is a new commit included in the local master and test_1 branches, and the remote master and test_1 branches, but not in either the local or remote test branches. This is where the upstream is useful.
+</p>
+<p>
+  Checkout branch test. enter f as you did with master but instead of typing p, type u, in order to fetch changes from the upstream setting that if necessary. When prompted enter master.
+
+  Fetch the last commit from master and merge it into the test branch. Then commit that change to the remote test branch creating that branch  by pushing using p and p and origin. Now everything is up to date.
+</p>
+<p>
+  You now know how to clone a repo, create a new branch, make changes, stage commit and push the changes and update other branches with a pull request that was merged into the master branch of the remote repo. There is plenty git functionality to learn but I think that this workflow covers the core of what you need to know and if you can get through these functions, you are in a good place to begin exploring git and solving problems that arise as you work with multiple versions of a single project.
+</p>
+<p>
+  Thanks very much for reading and I hope your understanding of git, emacs, and magit have improved!
+</p>
 
   
 <!-- ------------------------------- Content ends here   ------------------------------------- -->
