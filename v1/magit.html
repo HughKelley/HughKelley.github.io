@@ -67,10 +67,56 @@ Getting Started with Magit
   set up
 <p>
 <p>
-  what do you need to be abel to do for a basic workflow with git
-  clone
-  create a 
-  </p>
+  what do you need to be able to do for a basic workflow with git
+  start magit
+  clone a repo
+  create a new branch
+  make a change
+  save the change
+  run git on the repo
+  stage the change
+  commit the change
+  configure the new branch
+  push the change to remote. 
+</p>
+<p>
+  This obviously ignores the most important thing about git, the ability to actual control differences between versions. Still, I think this tutorial is useful because it is the absolute minimum set of commands you need to be able to use git within emacs using magit. A user that can follow this basic workflow is much better positioned to learn the more intricate operations from the manual pages. 
+</p>
+<p>
+  To install and set up magit:
+
+  M-x list_packages should produce a buffer listing all of the packages available through melpa.
+  C-s will allow you so search for a string in that buffer. after C-s type magit and use C-s to move through the results sequentially until you find the entry for magit. Click on magit and in the buffer that opens specific to the magit package click install.
+</p>
+<p>
+  You will then want to add (global-set-key (kbd "C-x g") 'magit-status) and
+  (global-set-key (kbd "C-x M-g") 'magit-dispatch) to your emacs init file. Once those are added, save with C-x s and refresh by evaulating that buffer again using M-x eval-buffer (there is a shroter version of this M-x ev-b but in my opinion saving a few key strokes isn't worth using an abbreviation that isn't very intuitive.)
+</p>
+<p>
+  Now you have magit installed and ready to use. Navigate to a directory of your choice, something like ~/code/ which is where I keep a lot of my programming repositories. On Windows this could be C\Users\Hugh\Documents\Code for example. You can do that by typing C-x D and editing the path shown in the emacs status buffer before hitting enter/RET.
+</p>
+<p>
+  Go to Github, make an account if necessary, and create a repo, which I'll call test. When creating the repo, use the option to create it with a README.md file. This is for two reasons, git doesn't like empty directories, and any good repo should have a readme.md document explaining what the repo is for so just make it a habit to include one. Don't create a .gitignore file. Once the repo is created, copy the path by clickin the (probably green) button that says clone or download and copy the SSH or HTTPS link for cloning the repo, use the HTTPS link unless you know you have an ssh connection to github set up already.
+</p>
+<p>  
+  Then type C-x M-g to run magit-dispatch using the keybinding we set up earlier. This will present you with a list of options for what Magit calls "suffixes". Enter suffix C, for Clone and paste in the link from github, probably using C-y. hit enter/RET to clone the repo.
+</p>
+<p>
+  Now that the repo is cloned we can access magit using the more standard approach, running magit-status from a file or directory within the repo using the C-x g keybinding we set up earlier. Once you're in the magit buffer, type b, the branch prefix, and you'll see a list of options for working with branches. Type c to create a new branch. First, you're asked what state the new branch should start from. In this case start from "master" but it's possible you might want to start from "dev" or another like "issue_1". So type mast, use tab to autocomplete and when asked, name the new branch "test".
+</p>
+<p>
+  Now in the magit buffer, you'll see that "head" is at the "test" branc at the last commit to the "master" branch that we created the test branch from.
+</p>
+<p>
+  Now open the README.md file in the repo using C-x C-f and navigating to the file's path from wherever emacs starts you. Make some change to the readme file, for instance adding the text "change 1".
+</p>
+<P>
+  Now return to magit, check the repo status and save the file ytou just edited with a single command, C_x g. You'll be asked to save the file, type y, and after a pause, shown the magit buffer with a single unstaged file, README.md.
+</p>
+<p>
+  Bring your cursor to the line of the unstaged file and press s to stage it. AFter a pause, put the cursor on the file again, now under staged files and type u which is how you can unstage a file. Stage that file again with s, and then begin the commit process but typing c with the cursor on the staged file.  
+
+  
 <!-- ------------------------------- Content ends here   ------------------------------------- -->
 
         </div>
