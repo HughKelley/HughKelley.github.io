@@ -68,14 +68,14 @@ body {
   overflow-x: hidden;
 }
 
-.content > div > h3{
+.content > div > h2{
   text-align: center;
 }
 
-.content > div > h4{
+.content > div > h3{
   text-align:left;
-  font-weight:normal;
-  font-style:italic;
+  /*font-weight:normal;*/
+  /*font-style:italic;*/
 }
 
 .content > div > p{
