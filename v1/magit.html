@@ -67,7 +67,8 @@ Getting Started with Magit
 <h3>Why Magit?</h3>
 <p>
   Magit is a useful tool because it offers a better interface than git at the command line, allowing more information to be available at a given time, an interactive "status" page than what you get at the command line for instance. It doesn't have the downsides of full GUI git clients like Github desktop though, difficulty seeing the relationship between local and remote for instance.
-
+</p>
+<p>
   While the Magit documentation has all of the info necessary to get it going, it doesn't make it easy. In my opinion it's written for someone (and probably by someone) already very familiar with git. So it focuses on how it abstracts away from git rather than how to get things done with git using magit.  
 </p>
 <p>
@@ -93,21 +94,22 @@ Getting Started with Magit
 <h3>To install and set up magit</h3>
 <p>
   <code> M-x list_packages</code> should produce a buffer listing all of the packages available through melpa.
-  C-s will allow you so search for a string in that buffer. after C-s type magit and use C-s to move through the results sequentially until you find the entry for magit. Click on magit and in the buffer that opens specific to the magit package click install.
+  <code>C-s</code> will allow you so search for a string in that buffer. after <code>C-s</code> type <code>magit</code> and use <code>C-s</code> to move through the results sequentially until you find the entry for magit. Click on <code>magit</code> and in the buffer that opens specific to the magit package click install.
 </p>
 <p>
-  You will then want to add <code>  (global-set-key (kbd "C-x g") 'magit-status) </code> and <code>  (global-set-key (kbd "C-x M-g") 'magit-dispatch) </code> to your emacs init file. Once those are added, save with <code> C-x s </code> and refresh by evaulating that buffer again using <code> M-x eval-buffer</code> (there is a shorter version of this <code>M-x ev-b</code> but in my opinion saving a few key strokes isn't worth using an abbreviation that isn't very intuitive.)
+  You will then want to add <code>(global-set-key (kbd "C-x g") 'magit-status) </code> and <code>  (global-set-key (kbd "C-x M-g") 'magit-dispatch) </code> to your emacs init file. Once those are added, save with <code> C-x s </code> and refresh by evaulating that buffer again using <code> M-x eval-buffer</code> (there is a shorter version of this <code>M-x ev-b</code> but in my opinion saving a few key strokes isn't worth using an abbreviation that isn't very intuitive.)
 </p>
 <h3>To create and clone a repo</h3>
 <p>
-  Now you have magit installed and ready to use. Navigate to a directory of your choice, something like <code> ~/code/</code> which is where I keep a lot of my programming repositories. On Windows this could be <code> C\Users\Hugh\Documents\Code</code> for example. You can do that by typing <code> C-x D</code> and editing the path shown in the emacs status buffer before hitting <code>RET</code>.
+  Now you have magit installed and ready to use. Navigate to a directory of your choice, something like <code> ~/code/</code> which is where I keep a lot of my repositories. On Windows this could be <code> C:\Users\Hugh\Documents\Code</code> for example. You can do that by typing <code> C-x D</code> and editing the path shown in the emacs status buffer before hitting <code>RET</code>.
 </p>
 <p>
-  Go to Github, make an account if necessary, and create a repo, which I'll call test. When creating the repo, use the option to create it with a README.md file. This is for two reasons, git doesn't like empty directories, and any good repo should have a readme.md document explaining what the repo is for so just make it a habit to include one. Don't create a <code>.gitignore</code> file. Once the repo is created, copy the path by clicking the (probably green) button that says clone or download and copy the <code>SSH</code> or <code>HTTPS</code> link for cloning the repo, use the HTTPS link unless you know you have an <code>SSH</code> connection to github set up already.
+  Go to Github, make an account if necessary, and create a repo, which I'll call <code>test_repo</code>. When creating the repo, use the option to create it with a README.md file. This is for two reasons, git doesn't like empty directories, and any good repo should have a readme.md document explaining what the repo is for so just make it a habit to include one. Don't create a <code>.gitignore</code> file. Once the repo is created, copy the path by clicking the (probably green) button that says clone or download and copy the <code>SSH</code> or <code>HTTPS</code> link for cloning the repo, use the HTTPS link unless you know you have an <code>SSH</code> connection to github set up already.
 </p>
 <p>  
-  Then type <code>C-x M-g</code> to run <code> magit-dispatch</code> using the keybinding we set up earlier. This will present you with a list of options for what Magit calls "suffixes". Enter suffix <code> C</code>, for <code> Clone</code> and paste in the link from github, probably using <code>C-y</code>. Hit <code>RET</code> to clone the repo.
+  Then type <code>C-x M-g</code> to run <code> magit-dispatch</code> using the keybinding we set up earlier. This will present you with a list of options for what Magit calls "prefixes". Enter prefix <code> C</code>, for <code> Clone</code>, select the <code>u</code> option to clone from a url, and paste in the link from github, probably using <code>C-y</code>. Hit <code>RET</code> to clone the repo, confirming that the path magit is cloning to goes to the directory you want the repo in. Use <code>y</code> to confirm that pushRemote should be <code>origin</code>. 
 </p>
+<img alt="picture of magit buffer after cloning" src="magit_snips/after_cloning.PNG">
 <h3>To create a new branch</h3>
 <p>
   Now that the repo is cloned we can access magit using the more standard approach, running <code>magit-status</code> from a file or directory within the repo using the <code>C-x g</code> keybinding we set up earlier. Once you're in the magit buffer, type <code>b</code>, the branch prefix, and you'll see a list of options for working with branches. Type <code>c</code> to create a new branch. First, you're asked what state the new branch should start from. In this case start from <code>master</code> but it's possible you might want to start from <code>dev</code> or another like <code>issue_1</code>. So type <code>mast</code>, use tab to autocomplete and when asked, name the new branch <code>test</code>.
@@ -160,6 +162,7 @@ Getting Started with Magit
   
 <!-- ------------------------------- Content ends here   ------------------------------------- -->
 
+<!---------------------------------- Bottom pane --------------------------------------------- -->
         </div>
       </div>
     </div>
@@ -173,7 +176,7 @@ Getting Started with Magit
       </ul>
     </div>
 
-
+<!---------------------------------- end Bottom pane --------------------------------------------- -->
 
 <!-- <div style="float;left;width:300px;display:inline;height:100vh;border:">
   How to get the div to be the full height of the window?
