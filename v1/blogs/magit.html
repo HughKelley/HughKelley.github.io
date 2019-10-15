@@ -22,7 +22,7 @@
     </div> -->
 
     <div class="topbar">
-      <div><center><h2 style="color:#f4c430">Hugh</h2></div>
+      <div><center><h2 style="color:#f4c430">Hugh</h2></center></div>
       <ul>
         <li><a href="https://hughkelley.github.io/">Site</a></li>
         <!-- The spacing gets weird for multi-word content... -->
@@ -47,6 +47,7 @@
           <li style="list-style-type:none"><a href="../v3/home.html">version 3</a></li>
           <li style="list-style-type:none"><a href="../v4/home.html">version 4</a></li>
           <li style="list-style-type:none"><a href="../v5/home.html">version 5</a></li>
+        </center>
         </ul>
       </div>
       <div class="content">
@@ -78,6 +79,7 @@ Getting Started with Magit
 <h4>A disclaimer</h4>
 <p>
   The only git interfaces I have used are the terminal, RStudio's git gui, which is maybe the best gui, and Github Desktop which I think is terrible. There may be better options than Magit but so far I'm very happy with magit. Like me, use it for a while and then try something else. 
+</p>
 <h3>A basic workflow with git</h3>
 <p>
   start magit <br>
@@ -103,6 +105,7 @@ Getting Started with Magit
 <p>
   You will then want to add <code>  (global-set-key (kbd "C-x g") 'magit-status) </code> and <code>  (global-set-key (kbd "C-x M-g") 'magit-dispatch) </code> to your emacs init file. Once those are added, save with <code> C-x s </code> and refresh by evaulating that buffer again using <code> M-x eval-buffer</code> (there is a shorter version of this <code>M-x ev-b</code> but in my opinion saving a few key strokes isn't worth using an abbreviation that isn't very intuitive.)
 </p>
+
 <h3>To create and clone a repo</h3>
 <p>
   Now you have magit installed and ready to use. Navigate to a directory of your choice, something like <code> ~/code/</code> which is where I keep a lot of my programming repositories. On Windows this could be <code> C\Users\Hugh\Documents\Code</code> for example. You can do that by typing <code> C-x D</code> and editing the path shown in the emacs status buffer before hitting <code>RET</code>.
@@ -114,7 +117,6 @@ Getting Started with Magit
   Then type <code>C-x M-g</code> to run <code> magit-dispatch</code> using the keybinding we set up earlier. This will present you with a list of options for what Magit calls "suffixes". Enter suffix <code> C</code>, for <code> Clone</code> and paste in the link from github, probably using <code>C-y</code>. Hit <code>RET</code> to clone the repo.
 </p>
 <img alt="picture of magit buffer after cloning" src="../images/magit_snips/after_cloning.PNG">
->>>>>>> Stashed changes:v1/blogs/magit.html
 <h3>To create a new branch</h3>
 <p>
   Now that the repo is cloned we can access magit using the more standard approach, running <code>magit-status</code> from a file or directory within the repo using the <code>C-x g</code> keybinding we set up earlier. Once you're in the magit buffer, type <code>b</code>, the branch prefix, and you'll see a list of options for working with branches. Type <code>c</code> to create a new branch. First, you're asked what state the new branch should start from. In this case start from <code>master</code> but it's possible you might want to start from <code>dev</code> or another like <code>issue_1</code>. So type <code>mast</code>, use tab to autocomplete, hit <code>RET</code> and when asked, name the new branch <code>test_0</code>.
@@ -132,7 +134,7 @@ Getting Started with Magit
 <p>
   Now open <code>README.md</code> in the repo using <code>C-x C-f</code> and navigating to the file's path from wherever emacs starts you. Make some change to the file, for instance adding the text <code>change 1</code> below the repo name.
 </p>
-<P>
+<p>
   Now return to magit, check the repo status and save the file you just edited with a single command, <code>C_x g</code>. You'll be asked to save the file, type <code>y</code>, and after a pause, shown the magit buffer with a single unstaged file, <code>README.md</code>.
 </p>
 <img alt="unstaged changes" src="../images/magit_snips/unstaged_changes.png">
@@ -140,6 +142,8 @@ Getting Started with Magit
   Bring your cursor to the line of the unstaged file and press s to stage it. After a pause, put the cursor on the file again, now under staged files and type <code>u</code> which is how you can unstage a file. Stage that file again with <code>s</code>, and then begin the commit process by typing <code>c</code> with the cursor on the staged file. You'll a familiar list of suffix options and complete the commit command by typing another <code>c</code>. Magit then runs the git <code>diff</code> function on the files staged and presents you with two buffers. One will show the output of diff for the file with your new line in green. The other will offer you the chance to add a commit message. Add a brief message and finish the commit using <code>C-c C-c</code>. (The <code>C-c C-c</code> command is a common way to complete a message like this across emacs modes, Org-mode uses it too for instance.)
 </p>
 <img alt="The diff" src="../images/magit_snips/diff.png">
+<br>
+<br>
 <img alt="adding a commit message" src="../images/magit_snips/commit_message.png">
 <h3>Push the commit to remote</h3>
 <p>
@@ -179,9 +183,7 @@ Getting Started with Magit
   Thanks very much for reading and I hope your understanding of git, emacs, and magit have improved!
 </p>
 
-<!-- ------------------------------- Content ends here   ------------------------------------- -->
-
-        </div>
+<!-- ------------------------------- Content ends here   ------------------------------------- -->        </div>
       </div>
     </div>
 
@@ -196,7 +198,6 @@ Getting Started with Magit
       </ul>
     </div>
     ------------------------------- end Bottom Bar ---------------------------------    
-    
   </BODY>
 
 </HTML>
