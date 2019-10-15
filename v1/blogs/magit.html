@@ -9,18 +9,6 @@
 
    </HEAD>
 <BODY>
-
-
-<!--     <div class="class1" style="background-color:#9BCB3B;">
-      <p>Hi</p>
-    </div>
-    <div class="class2" style="background-color:#1AB99E;">
-      <p>Aditya</p>
-    </div>
-    <div class="class3" style="background-color:#F36F25;">
-      <p>This is Working!</p>
-    </div> -->
-
     <div class="topbar">
       <div><center><h2 style="color:#f4c430">Hugh</h2></center></div>
       <ul>
@@ -59,8 +47,8 @@ Getting Started with Magit
 </h2>
 <h3>To Do</h3>
 <p>
-&#91;   &#93; Headings <br>
-&#91;   &#93;  Write steps<br>
+&#91; X  &#93; Headings <br>
+&#91; X &#93;  Write steps<br>
 &#91;   &#93; Test procedure myself <br>
 &#91;   &#93;  Add pictures <br>
 &#91;   &#93;  Format Code <br>
@@ -164,14 +152,15 @@ Getting Started with Magit
 <p>
   In emacs, open the magit buffer for the repo again.  Checkout the master branch if needed and fetch changes from the remote repo using <code>f p</code>. That will bring your master branch up to date with the remote master branch, and the <code>local</code> and <code>remote test_1</code> branches.
 </p>
-<img alt="" src="../images/magit_snips/">
+<img alt="" src="../images/magit_snips/fetch.png">
 <p>
-  Now imagine that we want to work on the issue that the original test branch is intended for. The current state is that there is a new commit included in the local master and test_1 branches, and the <code>remote master</code> and <code>test_1</code> branches, but not in either the local or remote test branches. This is where the upstream is useful.
+  Now imagine that we want to work on the issue that the original test branch is intended for. The current state is that there is a new commit included in the local master and test_1 branches, and the <code>remote master</code> and <code>test_1</code> branches, but not in either the local or remote <code>test_0</code> branches. This is where the upstream is useful.
 </p>
 <img alt="" src="../images/magit_snips/">
 <p>
-  Checkout branch test. enter f as you did with master but instead of typing <code>p</code>, type <code>u</code>, in order to fetch changes from the upstream setting that if necessary. When prompted enter <code>master</code>.
-
+  Checkout branch <code>test_0</code>. Enter <code>f</code> as you did with master but instead of typing <code>p</code>, type <code>u</code>, in order to fetch changes from the upstream setting that to <code>master</code> if necessary when prompted. <b>This does not work in my walkthrough, upstream is already set to origin/test_0</b>
+  </p>
+<p>
   Fetch the last commit from master and merge it into the test branch. Then commit that change to the remote test branch creating that branch by pushing with <code>p p origin</code>. Now everything is up to date.
 </p>
 <img alt="" src="../images/magit_snips/">
