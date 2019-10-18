@@ -118,7 +118,7 @@ Getting Started with Magit
 </p>
 <img alt="" src="../images/magit_snips/branch.png">
 <p>
-  Now in the magit buffer, you'll see that <code>head</code> is at the <code>test_0</code> branch at the last commit to the <code>master</code> branch that we created the <code>test</code> branch from, probably, <code>Initial Commit</code>. You'll also notice that the value of <code>Push</code> doesn't exist.  Repeat this procedure so that you have four branches, <code>master</code>, <code>test_0</code>, <code>test_1</code> and <code>test_2</code> and <code>head</code> is on <code>test_2</code>. 
+  Now in the magit buffer, you'll see that <code>head</code> is at the <code>test_0</code> branch at the last commit to the <code>master</code> branch that we created the <code>test</code> branch from, probably, <code>Initial Commit</code>. Repeat this procedure so that you have four branches, <code>master</code>, <code>test_0</code>, <code>test_1</code> and <code>test_2</code> and <code>head</code> is on <code>test_2</code>. 
 </p>
 <!-- <img alt="" src="../images/magit_snips/"> -->
 <p>
@@ -164,7 +164,7 @@ Getting Started with Magit
 -->
 <img alt="" src="../images/magit_snips/fetch.png">
 <p>
-  Now imagine that we want to work on the issuse that the test_0 and test_1 branches were intended for. The current state is that there is a new commit included in the local  test_2 branch, and the <code>remote master</code> and <code>test_1</code> branches, but not in either the local or remote <code>test_0</code> branches. This is where the upstream is useful.
+  Now imagine that we want to work on the issuse that the test_0 and test_1 branches were intended for. The current state is that there is a new commit included in the local  test_2 branch, and the <code>remote master</code> and <code>test_2</code> branches, but not in either the local or remote <code>test_0</code> and <code>test_1</code> branches. This is where the upstream is useful.
 </p>
 <!-- <img alt="" src="../images/magit_snips/"> -->
 <p>
@@ -176,6 +176,7 @@ Getting Started with Magit
 <p>
   Checkout <code>test_1</code> and pull from the upstream, setting that to <code>origin/master</code> using <code>F u</code>. Now use key <code>y</code> to view all of the branches. You should see that <code>master</code>  and <code>test_0</code> are on the initial commit while <code>test_1</code> and <code>test_2</code> are on the test commit you made.
 </p>
+<img alt="" src="../images/magit_snips/prop_changes.png">
 <p>
   Pull the commit into the local master and then pull the commit from local master into test_0 so that all branches are now at the same commit.
 </p>
