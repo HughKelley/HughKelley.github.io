@@ -63,7 +63,8 @@ Getting Started with Magit
   While the Magit documentation has all of the info necessary to get it going, it doesn't make it easy. In my opinion it's written for someone (and probably by someone) already very familiar with git. So it focuses on how it abstracts away from git rather than how to get things done with git using magit.  
 </p>
 <p>
-  This post will therefore walk through exactly the steps necessary to make emacs your go to git interface using Magit.
+https://magit.vc/manual/magit.html#Pushing
+  This post will therefore walk through exactly the steps necessary to make emacs your go to git interface using Magit. This first thing to be aware of is the <a href="https://magit.vc/manual/magit.html">Magit documentation</a>, which is very comprehensive, but doesn't tie things together for a beginner very well. 
 </p>
 <h4>A disclaimer</h4>
 <p>
@@ -86,7 +87,7 @@ Getting Started with Magit
 <p>
   This obviously ignores the most important thing about git, the ability to actual control differences between versions. Still, I think this tutorial is useful because it is the absolute minimum set of commands you need to be able to use git within emacs using magit. A user that can follow this basic workflow is much better positioned to learn the more intricate operations from the manual pages. 
 </p>
-<h3>To install and set up magit</h3>
+<h3><a href=https://magit.vc/manual/magit.html#Installation">To install and set up magit</a></h3>
 <p>
   <code> M-x list_packages</code> should produce a buffer listing all of the packages available through melpa. <code>C-s</code> will allow you so search for a string in that buffer. after <code>C-s</code> type <code>magit</code> and use <code>C-s</code> to move through the results sequentially until you find the entry for magit. Click on magit and in the buffer that opens specific to the magit package click install.
 </p>
@@ -102,18 +103,18 @@ Getting Started with Magit
   to your emacs init file. Once those are added, save with <code> C-x s </code> and refresh by evaulating that buffer again using <code> M-x eval-buffer</code> (there is a shorter version of this <code>M-x ev-b</code> but in my opinion saving a few key strokes isn't worth using an abbreviation that isn't very intuitive.)
 </p>
 
-<h3>To create and clone a repo</h3>
+<h3><a href="https://magit.vc/manual/magit.html#Cloning-Repository">To create and clone a repo</a></h3>
 <p>
   Now you have magit installed and ready to use. Navigate to a directory of your choice, something like <code> ~/code/</code> which is where I keep a lot of my programming repositories. On Windows this could be <code> C\Users\Hugh\Documents\Code</code> for example. You can do that by typing <code> C-x D</code> and editing the path shown in the emacs status buffer before hitting <code>RET</code>.
 </p>
 <p>
-  Go to Github, make an account if necessary, and create a repo, which I'll call test_repo. When creating the repo, use the option to create it with a <code>README.md</code>. This is for two reasons, git doesn't like empty directories, and any good repo should have a readme.md document explaining what the repo is for so just make it a habit to include one. Don't create a <code>.gitignore</code> file. Once the repo is created, copy the path by clicking the (probably green) button that says clone or download and copy the <code>SSH</code> or <code>HTTPS</code> link for cloning the repo, use the HTTPS link unless you know you have an <code>SSH</code> connection to github set up already.
+  Go to Github, make an account if necessary, and create a repo, which I'll call <code>test_repo</code>. When creating the repo, use the option to create it with a <code>README.md</code>. This is for two reasons, git doesn't like empty directories, and any good repo should have a readme.md document explaining what the repo is for so just make it a habit to include one. Don't create a <code>.gitignore</code> file. Once the repo is created, copy the path by clicking the (probably green) button that says clone or download and copy the <code>SSH</code> or <code>HTTPS</code> link for cloning the repo, use the HTTPS link unless you know you have an <code>SSH</code> connection to github set up already.
 </p>
 <p>  
   Then type <code>C-x M-g</code> to run <code> magit-dispatch</code> using the keybinding we set up earlier. This will present you with a list of options for what Magit calls "suffixes". Enter suffix <code> C</code>, for <code> Clone</code>, type <code>u</code> to clone from a url and paste in the link from github, probably using <code>C-y</code>. You will then be asked whether you want to <code>Set `remote.pushDefault` to "origin"? (y or n)</code>. Enter <code>n</code> and hit <code>RET</code> to clone the repo.
 </p>
 <img alt="picture of magit buffer after cloning" src="../images/magit_snips/after_cloning.PNG">
-<h3>To create a new branch</h3>
+<h3><a href="https://magit.vc/manual/magit.html#Branch-Commands">To create a new branch</a></h3>
 <p>
   Now that the repo is cloned we can access magit using the more standard approach, running <code>magit-status</code> from a file or directory within the repo using the <code>C-x g</code> keybinding we set up earlier. Once you're in the magit buffer, type <code>b</code>, the branch prefix, and you'll see a list of options for working with branches. Type <code>c</code> to create a new branch. First, you're asked what state the new branch should start from. In this case start from <code>master</code> but it's possible you might want to start from <code>dev</code> or another like <code>issue_1</code>. So type <code>mast</code>, use tab to autocomplete, hit <code>RET</code> and when asked, name the new branch <code>test_0</code>.
 </p>
@@ -141,7 +142,7 @@ Getting Started with Magit
 <br>
 <br>
 <img alt="adding a commit message" src="../images/magit_snips/commit_message.png">
-<h3>Push the commit to remote</h3>
+<h3><a href="https://magit.vc/manual/magit.html#Pushing">Push the commit to remote</a></h3>
 <p>
   The next step is to push the new commit. Begin this by typing the prefix <code>P</code> which pulls up the menu of suffix options. The two important options to be aware of are the<code>p</code> push to remote option and the <code>u</code> upstream option. This distinction is often missed using git from a terminal emulator but it's very useful to learn, particularly if you are contributing to a large project that will change while you work on an issue. 
 </p>
@@ -154,7 +155,7 @@ Getting Started with Magit
   Type <code>p</code> to push remote, setting that. Magit will ask for input and type or and hit tab. It should autocomplete to "origin". Hit <code>RET</code> and magit will push, creating a new branch on the remote, named after the local branch that you're pushing from. To confirm this, open github in a web browser and look at the branches in your repo. There should be a new branch called <code>test_2</code>.
 </p>
 <!-- <img alt="" src="../images/magit_snips/"> -->
-<h3>Propagate the change across branches</h3>
+<h3><a href="https://magit.vc/manual/magit.html#Pulling">Propagate the change across branches</a></h3>
 <p>
   Open a pull request in github to merge <code>test_1</code> into <code>master</code> and use your write privileges to confirm the merge. This leaves us with a change to remote that we don't have locally. Return to emacs.
 </p>
