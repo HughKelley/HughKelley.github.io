@@ -45,13 +45,14 @@
 <h2>
 Getting Started with Magit
 </h2>
+<h5>October 18, 2019</h5>
 <h3>To Do</h3>
 <p>
-&#91; X  &#93; Headings <br>
+&#91; X &#93; Headings <br>
 &#91; X &#93;  Write steps<br>
-&#91;   &#93; Test procedure myself <br>
-&#91;   &#93;  Add pictures <br>
-&#91;   &#93;  Format Code <br>
+&#91; X &#93; Test procedure myself <br>
+&#91; X &#93;  Add pictures <br>
+&#91; X &#93;  Format Code <br>
 &#91;   &#93;  Link to magit docs <br>
 </p>
 <h3>Why Magit?</h3>
@@ -87,11 +88,18 @@ Getting Started with Magit
 </p>
 <h3>To install and set up magit</h3>
 <p>
-  <code> M-x list_packages</code> should produce a buffer listing all of the packages available through melpa.
-  C-s will allow you so search for a string in that buffer. after C-s type magit and use C-s to move through the results sequentially until you find the entry for magit. Click on magit and in the buffer that opens specific to the magit package click install.
+  <code> M-x list_packages</code> should produce a buffer listing all of the packages available through melpa. <code>C-s</code> will allow you so search for a string in that buffer. after <code>C-s</code> type <code>magit</code> and use <code>C-s</code> to move through the results sequentially until you find the entry for magit. Click on magit and in the buffer that opens specific to the magit package click install.
 </p>
 <p>
-  You will then want to add <code>  (global-set-key (kbd "C-x g") 'magit-status) </code> and <code>  (global-set-key (kbd "C-x M-g") 'magit-dispatch) </code> to your emacs init file. Once those are added, save with <code> C-x s </code> and refresh by evaulating that buffer again using <code> M-x eval-buffer</code> (there is a shorter version of this <code>M-x ev-b</code> but in my opinion saving a few key strokes isn't worth using an abbreviation that isn't very intuitive.)
+  You will then want to add: 
+  <br>
+  <br> 
+  <code>(global-set-key (kbd "C-x g") 'magit-status) </code>
+  <br>
+  <code>  (global-set-key (kbd "C-x M-g") 'magit-dispatch) </code> 
+  <br>
+  <br>
+  to your emacs init file. Once those are added, save with <code> C-x s </code> and refresh by evaulating that buffer again using <code> M-x eval-buffer</code> (there is a shorter version of this <code>M-x ev-b</code> but in my opinion saving a few key strokes isn't worth using an abbreviation that isn't very intuitive.)
 </p>
 
 <h3>To create and clone a repo</h3>
@@ -99,10 +107,10 @@ Getting Started with Magit
   Now you have magit installed and ready to use. Navigate to a directory of your choice, something like <code> ~/code/</code> which is where I keep a lot of my programming repositories. On Windows this could be <code> C\Users\Hugh\Documents\Code</code> for example. You can do that by typing <code> C-x D</code> and editing the path shown in the emacs status buffer before hitting <code>RET</code>.
 </p>
 <p>
-  Go to Github, make an account if necessary, and create a repo, which I'll call test. When creating the repo, use the option to create it with a README.md file. This is for two reasons, git doesn't like empty directories, and any good repo should have a readme.md document explaining what the repo is for so just make it a habit to include one. Don't create a <code>.gitignore</code> file. Once the repo is created, copy the path by clicking the (probably green) button that says clone or download and copy the <code>SSH</code> or <code>HTTPS</code> link for cloning the repo, use the HTTPS link unless you know you have an <code>SSH</code> connection to github set up already.
+  Go to Github, make an account if necessary, and create a repo, which I'll call test_repo. When creating the repo, use the option to create it with a <code>README.md</code>. This is for two reasons, git doesn't like empty directories, and any good repo should have a readme.md document explaining what the repo is for so just make it a habit to include one. Don't create a <code>.gitignore</code> file. Once the repo is created, copy the path by clicking the (probably green) button that says clone or download and copy the <code>SSH</code> or <code>HTTPS</code> link for cloning the repo, use the HTTPS link unless you know you have an <code>SSH</code> connection to github set up already.
 </p>
 <p>  
-  Then type <code>C-x M-g</code> to run <code> magit-dispatch</code> using the keybinding we set up earlier. This will present you with a list of options for what Magit calls "suffixes". Enter suffix <code> C</code>, for <code> Clone</code> and paste in the link from github, probably using <code>C-y</code>. Hit <code>RET</code> to clone the repo.
+  Then type <code>C-x M-g</code> to run <code> magit-dispatch</code> using the keybinding we set up earlier. This will present you with a list of options for what Magit calls "suffixes". Enter suffix <code> C</code>, for <code> Clone</code>, type <code>u</code> to clone from a url and paste in the link from github, probably using <code>C-y</code>. You will then be asked whether you want to <code>Set `remote.pushDefault` to "origin"? (y or n)</code>. Enter <code>n</code> and hit <code>RET</code> to clone the repo.
 </p>
 <img alt="picture of magit buffer after cloning" src="../images/magit_snips/after_cloning.PNG">
 <h3>To create a new branch</h3>
@@ -111,7 +119,7 @@ Getting Started with Magit
 </p>
 <img alt="" src="../images/magit_snips/branch.png">
 <p>
-  Now in the magit buffer, you'll see that <code>head</code> is at the <code>test_0</code> branch at the last commit to the <code>master</code> branch that we created the <code>test</code> branch from, probably, <code>Initial Commit</code>. You'll also notice that the value of <code>Push</code> doesn't exist.  Repeat this procedure so that you have three branches, <code>master</code>, <code>test</code>, and <code>test_1</code> and <code>head</code> is on <code>test_1</code>. 
+  Now in the magit buffer, you'll see that <code>head</code> is at the <code>test_0</code> branch at the last commit to the <code>master</code> branch that we created the <code>test</code> branch from, probably, <code>Initial Commit</code>. Repeat this procedure so that you have four branches, <code>master</code>, <code>test_0</code>, <code>test_1</code> and <code>test_2</code> and <code>head</code> is on <code>test_2</code>. 
 </p>
 <!-- <img alt="" src="../images/magit_snips/"> -->
 <p>
@@ -127,7 +135,7 @@ Getting Started with Magit
 </p>
 <img alt="unstaged changes" src="../images/magit_snips/unstaged_changes.png">
 <p>
-  Bring your cursor to the line of the unstaged file and press s to stage it. After a pause, put the cursor on the file again, now under staged files and type <code>u</code> which is how you can unstage a file. Stage that file again with <code>s</code>, and then begin the commit process by typing <code>c</code> with the cursor on the staged file. You'll a familiar list of suffix options and complete the commit command by typing another <code>c</code>. Magit then runs the git <code>diff</code> function on the files staged and presents you with two buffers. One will show the output of diff for the file with your new line in green. The other will offer you the chance to add a commit message. Add a brief message and finish the commit using <code>C-c C-c</code>. (The <code>C-c C-c</code> command is a common way to complete a message like this across emacs modes, Org-mode uses it too for instance.)
+  Bring your cursor to the line of the unstaged file and press <code>s</code> to stage it. After a pause, put the cursor on the file again, now under staged files and type <code>u</code> which is how you can unstage a file. Stage that file again with <code>s</code>, and then begin the commit process by typing <code>c</code> with the cursor on the staged file. You'll a familiar list of suffix options and complete the commit command by typing another <code>c</code>. Magit then runs the git <code>diff</code> function on the files staged and presents you with two buffers. One will show the output of diff for the file with your new line in green. The other will offer you the chance to add a commit message. Add a brief message and finish the commit using <code>C-c C-c</code>. (The <code>C-c C-c</code> command is a common way to complete a message like this across emacs modes, Org-mode uses it too for instance.)
 </p>
 <img alt="The diff" src="../images/magit_snips/diff.png">
 <br>
@@ -135,35 +143,45 @@ Getting Started with Magit
 <img alt="adding a commit message" src="../images/magit_snips/commit_message.png">
 <h3>Push the commit to remote</h3>
 <p>
-  The next step is to push the new commit. Begin this by typing the prefix <code>P</code> which pulls up the menu of suffix options. The two important options to be aware of are the<code>p</code> push to remote option and the u upstream option. This distinction is often missed using git from a terminal emulator but it's very useful to learn, particularly if you are contributing to a large project that will change while you work on an issue. 
+  The next step is to push the new commit. Begin this by typing the prefix <code>P</code> which pulls up the menu of suffix options. The two important options to be aware of are the<code>p</code> push to remote option and the <code>u</code> upstream option. This distinction is often missed using git from a terminal emulator but it's very useful to learn, particularly if you are contributing to a large project that will change while you work on an issue. 
 </p>
 <img alt="" src="../images/magit_snips/Push.png">
 <p>
-  The remote is meant to be the remote copy of your new local branch. Upstream is meant to be the branch that your current local branch evolves from. Chances are that whatever branch you used as the beginning of the current branch when you created it is the branch you want as upstream remote.
+  The remote is meant to be the remote copy of your new local branch. Upstream is meant to be the branch that your current local branch evolves from and is eventually merged back into probably through a pull request. Chances are that whatever branch you used as the beginning of the current branch when you created it is the branch you want as upstream remote.
 </p>
 <img alt="" src="../images/magit_snips/pushed.png">
-<p> type p to push remote, setting that. Magit will ask for input and type org and hit tab. It should autocomplete to "origin". Hit <code>RET</code> and magit will push, creating a new branch on the remote, named after the local branch that you're pushing from. To confirm this, open github in a web browser and look at the branches in your repo. There should be a new branch called <code>test_1</code>.
+<p> 
+  Type <code>p</code> to push remote, setting that. Magit will ask for input and type or and hit tab. It should autocomplete to "origin". Hit <code>RET</code> and magit will push, creating a new branch on the remote, named after the local branch that you're pushing from. To confirm this, open github in a web browser and look at the branches in your repo. There should be a new branch called <code>test_2</code>.
 </p>
 <!-- <img alt="" src="../images/magit_snips/"> -->
 <h3>Propagate the change across branches</h3>
 <p>
   Open a pull request in github to merge <code>test_1</code> into <code>master</code> and use your write privileges to confirm the merge. This leaves us with a change to remote that we don't have locally. Return to emacs.
 </p>
+<!--
 <p>
   In emacs, open the magit buffer for the repo again.  Checkout the master branch if needed and fetch changes from the remote repo using <code>f p</code>. That will bring your master branch up to date with the remote master branch, and the <code>local</code> and <code>remote test_1</code> branches.
 </p>
+-->
 <img alt="" src="../images/magit_snips/fetch.png">
 <p>
-  Now imagine that we want to work on the issue that the original test branch is intended for. The current state is that there is a new commit included in the local master and test_1 branches, and the <code>remote master</code> and <code>test_1</code> branches, but not in either the local or remote <code>test_0</code> branches. This is where the upstream is useful.
+  Now imagine that we want to work on the issuse that the test_0 and test_1 branches were intended for. The current state is that there is a new commit included in the local  test_2 branch, and the <code>remote master</code> and <code>test_2</code> branches, but not in either the local or remote <code>test_0</code> and <code>test_1</code> branches. This is where the upstream is useful.
 </p>
-<img alt="" src="../images/magit_snips/">
+<!-- <img alt="" src="../images/magit_snips/"> -->
 <p>
-  Checkout branch <code>test_0</code>. Enter <code>f</code> as you did with master but instead of typing <code>p</code>, type <code>u</code>, in order to fetch changes from the upstream setting that to <code>master</code> if necessary when prompted. <b>This does not work in my walkthrough, upstream is already set to origin/test_0</b>
-  </p>
-<p>
-  Fetch the last commit from master and merge it into the test branch. Then commit that change to the remote test branch creating that branch by pushing with <code>p p origin</code>. Now everything is up to date.
+  Checkout branch <code>test_0</code>. Enter <code>F</code>, type <code>u</code>, in order to fetch changes from the upstream setting that to <code>master</code> when prompted. 
 </p>
-<img alt="" src="../images/magit_snips/">
+<p>
+  This will not update <code>test_0</code> though because the local master branch does not yet have the commit from <code>test_2</code>.
+</p>
+<p>
+  Checkout <code>test_1</code> and pull from the upstream, setting that to <code>origin/master</code> using <code>F u</code>. Now use key <code>y</code> to view all of the branches. You should see that <code>master</code>  and <code>test_0</code> are on the initial commit while <code>test_1</code> and <code>test_2</code> are on the test commit you made.
+</p>
+<img alt="" src="../images/magit_snips/prop_changes.png">
+<p>
+  Pull the commit into the local master and then pull the commit from local master into test_0 so that all branches are now at the same commit.
+</p>
+<!-- <img alt="" src="../images/magit_snips/"> -->
 <h3>Wrapping Up</h3>
 <p>
   You now know how to clone a repo, create a new branch, make changes, stage commit and push the changes and update other branches with a pull request that was merged into the master branch of the remote repo. There is plenty git functionality to learn but I think that this workflow covers the core of what you need to know and if you can get through these functions, you are in a good place to begin exploring git and solving problems that arise as you work with multiple versions of a single project.
