@@ -1,0 +1,46 @@
+.basic {   /* border: 5px solid;
+            border-radius:15px;
+            border-color:grey;*/
+            /*overrides the body color:white below*/
+            outline-style: solid;
+            outline-color:#800000;
+            /* outline goes around the section divs*/
+            margin:10px;
+            padding:10px;
+            overflow:hidden;
+            background:#facfbf;
+            /*height:500px;*/
+            color:black;
+        }
+
+.header-section {   background:#800000;
+                    overflow:hidden;
+                }
+
+body {  background:#a9a9a9;
+        color:white;
+        border-color:white;
+        /*this border color attribute has no effect currently, all handled by class basic*/
+    }
+
+.content-frame-out{
+    max-width:1300px;
+    margin-left:auto;
+    margin-right:auto;
+    background:#800000;
+}
+
+.content-frame-in{ max-width:1150px;
+                    margin-left:auto;
+                    margin-right:auto; }
+
+.basic > h3{font-size:large;}
+.basic > h4{font-size:medium;}
+
+.about{ vertical-align:middle;
+        width:70%;
+        margin-left:20px;
+        float:left;
+        color:#ffffff;
+    }
+

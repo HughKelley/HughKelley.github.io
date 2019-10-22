@@ -1,0 +1,10 @@
+blogs:
+
+	goal for book reviews
+	meditation thoughts
+	How to teach yourself computer science
+	Current Bike
+	Breakfast of Champions
+	Tinker Tailor Soldier Spy
+	Max Subarray Problem
+	calculating square roots in python. 	

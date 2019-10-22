@@ -15,6 +15,7 @@ body {
   height:100%;
   margin:0;
   padding: 0px;
+  background-color:#800000;
   /*overflow-x:hidden;*/
 }
 
@@ -68,14 +69,14 @@ body {
   overflow-x: hidden;
 }
 
-.content > div > h3{
+.content > div > h2{
   text-align: center;
 }
 
-.content > div > h4{
+.content > div > h3{
   text-align:left;
-  font-weight:normal;
-  font-style:italic;
+  /*font-weight:normal;*/
+  /*font-style:italic;*/
 }
 
 .content > div > p{
@@ -89,15 +90,13 @@ body {
   text-decoration:none;
 }
 
-
-
-
-
 .bottombar{
   width:100%;
+  max-width:500px;
   height:100px;
   background-color:#800000;
-  float:left;
+  /*float:left;*/
+  margin:auto;
 }
 
 .bottombar > ul{display:table;width:95%;}
@@ -111,7 +110,7 @@ a {
 .content-link{color:#3333ff;}
 
 .center {
- text-align: center
+ text-align:center
 }
 
 p {
