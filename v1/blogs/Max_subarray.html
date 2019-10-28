@@ -52,7 +52,7 @@
   There are plenty of solutions online, but what is a good middle ground between just using someone else's code and being unable to come up with a solution that challenged professional computer scientists. 
 </p>
 <p>
-  The "levels" of the problem are the O(n<sup>2</sup>) solution, the O(nlog(n)) solution and the O(n) solution. These are the brute force method, Kadane's algorithm, and the divide and conquer approach. To be fair, the divide and conquer approach is both more difficult to understand and less optimal compared to Kadane's algorithm. Leetcode calls it "more subtle". 
+  The "levels" of the problem are the O(n<sup>2</sup>) solution, the O(nlog(n)) solution and the O(n) solution. These are the brute force method, the divide and conquer approach and Kadane's algorithm. To be fair, the divide and conquer approach is both more difficult to understand and less optimal compared to Kadane's algorithm. Leetcode calls it "more subtle". 
 </p>
 <p>
   Across solutions, I found it really helpful to have an example array and to draw out each subarray that was tested in order to understand how subarrays were eliminated as possibilities without having to calculate their sums. 
@@ -68,24 +68,58 @@
 </p>
 
 <p>
-  In leetcode, this solution will not meet the time standard for a working solution. That requires at least Kadane's algorithm. 
+  In leetcode, this solution will not meet the time standard for a working solution. That requires at least the divide and conquer approach. 
 </p>
-
-
-<h4> 
-  Kadane's Algorithm
-</h4>
-<p>
-  Kadane's Algorithm focuses on calculating the endpoints of the maximum subarray. If the sum of negative values between two positive values is greater than one or both of the positive values, then the solution will not use both of the positive values. 
-</p>
-
 <h4>
   Divide and Conquer
 </h4>
 <p>
 the divide and conquer approach was the most difficult for me to get my head around. The basic idea is that for a given index of the array, the optimal solution will exist in one of three places, entirely to the left of the index, entirely to the right of the index, or including the index. 
 </p>
+<h4> 
+  Kadane's Algorithm
+</h4>
+<p>
+  Kadane's Algorithm focuses on calculating the endpoints of the maximum subarray. If the sum of negative values between two positive values is greater than one or both of the positive values, then the solution will not use both of the positive values. 
+</p>
+<p>
+  <code>class Solution: <br>
+	<span style="margin-left:40px;">
+      def maxSubArray(self, A):</span> <br>
+	  <span style="margin-left:80px;" >
+        current = max_sum = A[0]</span><br>
+        <span style="margin-left:80;px">for num in A[1:]:</span><br>
+		    <span style="margin-left:120px;">
+            current = max(num, current + num)</span><br>
+			<span style="margin-left:120px;">
+			max_sum = max(max_sum, current)</span><br>
+			</span>
+	  <span style="margin-left:80px;">
+	  return maxSum
+	</span>
+  </code>
+</p>
+<p>
+  This function initializes <code>curSum</code> and <code>maxSum</code> to the value of the first item in the list. This is much better than initializing to 0 because it will handle an array of negative numbers successfully where initializing to 0 may return 0 instead of the max value of the array. 
+</p>
+<p>
+  Then for each position in the Array after the first position, there are three possible values that should be saved as the current maximum. These are the current max sum, the max sum plus the new number, or the new number. The function defined above implements this as two lines, first setting the current sum variable to the larger of the new number or the current sum plus the new number. the larger of those two is then compared to the existing maximum sum.
+</p>
+<p>
+  It's important to be sure that a position will never be added to a sum that it is not contiguous to. This is accomplished through the curSum variable which you could think of as finding the trailing end of the maxSubArray. If the true max subarray includes the 0 position of the array, then curSum will never be set to num. It will add num to itself each time the loop runs.
+</p>
+<p>
+  you can think of the maxSum line as protecting the answer from trailing negative numbers. If the number is negative and less than the current maxSum, curSum will remain equal to the maxsum, and be updated to num, wich will be less than maxSum, which will be unchanged. If the number is negative and more than maxSum, curSum will be set to equal num, and maxSum will be set to equal curSum which will be the value of num. The algorithm will then have a new starting index and continue to test positions in the array. 
+</p>
+<p>
+  There are a few things to keep in mind with this solution. First, this function doesn't check for an empty array. Second, it's returning the max sum, not the array with the maximum sum. Third and related to that, how should the function handle a 0 at the edge of the max sub array? Should that be included or not?
+  In order to get the array instead of the sum, I would recommend adding a few variables, <code>begin</code> and <code>end</code>, using if statements instead of <code>max()</code> and updating the variables depending on how the if statements evaluate. If num is ever larger than current, the index variable <code>begin</code> would then be the position of num. If the second check selected max_sum instead of current, update end the position of num.
+</p>
 
+
+<h4>
+  Greedy
+</h4>
 <!-- ------------------------------- Content ends here   ------------------------------------- -->
 
         </div>
