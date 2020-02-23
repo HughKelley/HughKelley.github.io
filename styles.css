@@ -17,7 +17,7 @@
                     overflow:hidden;
                 }
 
-body {  background:#a9a9a9;
+body {  background:#800000;
         color:white;
         border-color:white;
         /*this border color attribute has no effect currently, all handled by class basic*/
@@ -44,3 +44,21 @@ body {  background:#a9a9a9;
         color:#ffffff;
     }
 
+
+
+.bottombar{
+  width:100%;
+  max-width:500px;
+  /*height:50px;*/
+  background-color:#800000;
+  /*float:left;*/
+  margin:auto;
+}
+
+.bottombar > ul{display:table;width:95%;}
+.bottombar > ul > li{list-style:none;margin:0;padding:0;display:table-cell;}
+
+
+.center {
+ text-align:center
+}
