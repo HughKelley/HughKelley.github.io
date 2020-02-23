@@ -1,0 +1,185 @@
+
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+   <HEAD>
+      <TITLE>
+         hugh: Dissertation
+      </TITLE>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+
+   </HEAD>
+<BODY>
+
+
+<!--     <div class="class1" style="background-color:#9BCB3B;">
+      <p>Hi</p>
+    </div>
+    <div class="class2" style="background-color:#1AB99E;">
+      <p>Aditya</p>
+    </div>
+    <div class="class3" style="background-color:#F36F25;">
+      <p>This is Working!</p>
+    </div> -->
+
+    <div class="topbar">
+      <div><center><h2 style="color:#f4c430">Hugh</h2></div>
+      <ul>
+        <li><a href="https://hughkelley.github.io/">Site</a></li>
+        <!-- The spacing gets weird for multi-word content... -->
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="school.html">School</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="play.html">Play</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="misc.html">Misc</a></li>
+      </ul>
+    </div>
+    <div class="content_window">
+      <div class="sidebar">
+        <!-- <center> -->
+        <p class="center" style="color:#f4c430">Content Navigation</p>
+        <ul>
+          <center>
+          <li style="list-style-type:none"><a href="home.html">version 1</a></li>
+          <li style="list-style-type:none"><a href="../v2/home.html">version 2</a></li>
+          <li style="list-style-type:none"><a href="../v3/home.html">version 3</a></li>
+          <li style="list-style-type:none"><a href="../v4/home.html">version 4</a></li>
+          <li style="list-style-type:none"><a href="../v5/home.html">version 5</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div style="padding:10px;" >
+<!-- ------------------------------- Content starts here ------------------------------------ -->
+<h3> 
+  You Can't Get There from Here
+</h3>
+<h4>
+  Quantifying the Tradeoff between directness and Safety for cyclists in London
+</h4>
+<p> 
+  I finished a master's thesis At UCL's Centre for Advanced Spatial Analysis in August 2019. I looked at the difference in travel distances between trips that used all of London's streets and trips that only used "side streets". It was a great learning experience and I want to summarize, what I learned, what I found, and why it matters here.
+</p>
+<p>
+  The basic goal of the project was to measure how much further one needs to travel in order to avoid the most major roads in London.   This type of analysis has been done a few times before for cities in the US. My analysis had a few obstacles to overcome. Most critically, the data previous studies used was not available to me. the previous studies used highly detailed and professoinally collected data on the nature of traffic, the size of the shoulder, the number of lanes and the presence of cycling infrastructure on each road. This data wasn't available from an official London source, so I would need to replicate it using OpenStreetMap. Second was that I also wanted to complete the project in Python rather than with the ESRI tools that previous studies had used. 
+</p>
+<p>
+  OSM data is a little tricky to use. 
+</p>
+<p>
+  Using OSMnx, a PostgreSQL database with the PostGIS extension, and standard Python data cleaning tools, I built representative networks of London streets. 
+  </p>
+<p>
+  Then using NetworkX, I calculated distances between several hundred points within London.
+</p>
+<p>
+Then it was simply a matter of comparing how many trips were still possible (60%) and comparing the average distances for the different street networks I had built. 
+</p>
+<p>
+  My basic finding was that until the streets in London that OSM has identified as "trunk" and "primary" streets are safe for cyclists, it is very unlikely that one could call the cycle network sufficient. 
+</p>
+<h6>
+  What did I learn?
+</h6>
+<p>
+  First, this was by far the biggest project I've ever undertaken on my own. I used David Allen's Getting Things Done method to manage the various tasks and be sure that I was making progress in a given week even when it didn't seem like much was getting done.
+
+  Second, I have a much better appreciation for the value of databases. Throughout the summer, I would need to check something or transform and could do it quickly and easily with coplete certainty that the data i was operating on was the correct version. I frequently thought to myself, "Storage like memory" given how I could basically forget about the need to load and save files as well as the ability to operate on data in Python or PostGIS and immediately visualize it in QGIS because they were all working off of the same database "backend".
+
+  Third, I have a much better appreciation of what goes into an academic article and the relationship between a dissertation and an article. Basically, a dissertation is 10,000 to 12,000 words compared to a paper's 5,000 to 8,000 words because it includes a much higher level of detail about what was done, things that didn't work, things that informed how the actual methodology was developed and more verbose introductoin, literature review and conclusion. 
+  </p>
+<p>
+
+
+<!-- ------------------------------- Content ends here   ------------------------------------- -->
+
+        </div>
+      </div>
+    </div>
+    <div class="bottombar">
+      <h4 style="color:#f4c430" class="center">Contact</h4>
+      <ul>
+        <li class="bottom-text">(202) 499-8852</li>
+        <li class="bottom-text">850 Quincy St NW Washington, DC 20011</li>
+        <li><a href="hghklly@gmail.com">hghklly@gmail.com</a></li>
+        <li><a href="https://github.com/HughKelley/HughKelley.github.io">Source Repo</a></li>
+      </ul>
+    </div>
+
+
+
+<!-- <div style="float;left;width:300px;display:inline;height:100vh;border:">
+  How to get the div to be the full height of the window?
+</div> -->
+<!-- 
+<span style="width:150px;height:100px;background-color:red;" > first span test </span> -->
+
+<!-- <span style="width:600px;background-color:blue;" > second span test
+  <br>
+
+  second span second line test. 
+
+</span>
+
+<span>  -->
+
+
+
+<!-- <div class=top>
+  <span>
+    <p> test text</p>
+  </span>
+  <span>
+    <p> test text</p>
+  </span>
+</div>
+
+
+<div class=test> 
+  <p> test text</p>
+</div> -->
+
+
+
+<!-- 
+   <H2>Hi!</H2>
+   <P>Thanks for visiting my page</P>
+
+
+  <H1> Plans </H1>
+
+<p>the plan is to build a personal website with only HTML and CSS
+
+Once that's basically done, I'll add in some fancy stuff. 
+
+ </p>
+
+<h1>Links </h1>
+
+<p>
+<a href="work.html">link to work page</a>
+<br>
+<a href="education.html">link to edu page</a>
+
+
+
+</p>
+
+</span>
+ -->
+
+<!--   <div id="like_button_container"></div>-->
+
+
+
+     <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+<!--  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>-->
+<!--  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>-->
+
+  <!-- Load our React component. -->
+<!--  <script src="like_button.js"></script> -->
+     
+</BODY>
+</HTML>
