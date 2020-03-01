@@ -4,47 +4,42 @@
     <TITLE>
       hugh
     </TITLE>    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="v1/styles.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-	
   </HEAD>
+
+<!---
+TODO's
+take all styling out of html and put in css
+fix spacing and positioning
+
+
+--->
+
+
+  
   <BODY>
     <div class="content-frame-out">
       <div class="content-frame-in">
-      <div> 
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">hugh</a>
-            </div>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="v1/home.html">V1</a></li>
-              <li><a href="#number2">Work</a></li>
-              <li><a href="#number3">Fun</a></li>
-              <li><a href="#number4">School</a></li>
-              <!-- <li><a href="#number5">Life</a></li> -->
-              <li><a href="#number6">Blog</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    <div id = "number1" class="header-section" class="basic" class="container-fluid" style="">
+	      <!-- ------------------------------- start top Bar --------------------------------- -->
+    <div class="bottombar">
+      <ul>
+        <li> <a href="v1/blog.html">blogs</a></li>
+        <li><a href="v1/work.html">work</a></li>
+        <li><a href="v1/about.html">about</a></li>
+        <li><a href="v1/contact.html">contact</a></li>
+      </ul>
+    </div>
+    <!-- ------------------------------- end top Bar ---------------------------------     -->
+	
+    <div id = "number1" class="header-section" class="basic">
       <!-- <div class="container" style="width:50%;height:90%;border-style:solid;float:left;"> -->
       <!-- <p> Test text for image container</p> -->
-      <img src="v1/images/me.jpg" alt="image of hugh" style="margin-left:20px;width:25%;float:left;">
+      <img src="https://i.imgur.com/G8txhTg.jpg" alt="image of hugh" style="margin-left:20px;width:25%;float:left;">
       <!-- </div> -->
-        <div class="about" class="container-fluid">
+        <div class="about">
           <p>
-            Hi, I'm Hugh
+            Hi, I'm hugh
           </p>
           <p>
             I'm interested in programming, data analysis especially of a spatial nature, making software and cities work better for their least powerful users and repairing mechanical things. 
@@ -65,109 +60,18 @@
 
             I tend to think that any data that's collected should be available to all. 
           </p>
-          <p>
-            we'll see if I come to regret that. 
-          </p>
+         
       </div>
     </div>
 
-	<div id-"number1_5" class="newbasic" class="container-fluid">
-	  <h4>Explanation</h4>
+	<div id="number1_5" class="exp">
 		  <p>
-			This site might look a little weird as you navigate around. I intend it to be a little history of the web and history of how i learned the basics of web development. As I "create content" for the website, I'll add features, structure and formatting as necessary. The first iteration of the site will be pure static html and css. As of 2020, anything you're looking at was hand written. No templates used, no dynamic building of pages. As I put together a site template and structure I hope to add more sophisticated features. Apologies if the design of the site is offensively bad, it isn't my strong suit.
+			This site might look a little weird as you navigate around. I intend it to be a little history of the web and history of how I learned the basics of web development. As I "create content" for the website, I'll add features, structure and formatting as necessary. The first iteration of the site will be pure static html and css. As of February 2020, anything you're looking at was hand written. No templates used, no dynamic building of pages, no css libraries. As I put together a site template and structure I hope to add more sophisticated features. Apologies if the design of the site is offensively bad, it isn't my strong suit.
 			</p>
 	  </div>
 	
-<!---
-	
-    <div id="number2" class="basic" class="container-fluid">
-      <h3>My Work Life</h3>
-      <p>
-        Here are my 
-        <a href="https://github.com/HughKelley">
-          Github
-        </a> 
-        and 
-        <a href="www.linkedin.com/in/hugh-kelley">
-          LinkedIn.
-        </a>
-        The Master's thesis that I completed in September is available on github. If you want to read more about that I hope to have a quick <a href="v1/blog.html">blog post</a> up about it soon. 
-
-        You can also see the contibutions I've made to Pandas so far, which has been a great way to learn some professional codebase management and development techniques as well as just becoming more familiar with git and github best practices. 
-
-        I also know how to ask a question on 
-        <a href="https://stackoverflow.c#facfbfom/users/3033634/hugh-kelley">
-          stack overflow
-        </a> 
-        without being hounded off the site!
-      </p>
-      <p> 
-        Someday I hope to have a <a href="https://www.researchgate.net/profile/Hugh_Kelley3">ResearchGate</a> profile worth looking at too. That could be a while though. The two papers I'm working on publishing are pretty early in life. 
-      </p>
-
-      <h3>Ancient History</h3>
-      <p>
-        In a past life I was a registered investment advisor and worked as an analyst mostly on portfolio construction and on building combinations of actively managed equity portfolios. Here's my very short and very clean <a href="https://brokercheck.finra.org/individual/summary/6461678" >U-4 </a>.
-      </p>
-      <p>
-        While a career as an investment advisor or financial analyst of any kind was clearly not for me, I'm always happy to talk to people about whether they need their very own professional financial investment advisor (Almost definitely not (you shouldn't pay someone to do your taxes either &#129322 (whoa parentheses within parentheses (if you've made it this deep, you now know lisp)))) to work with, how they can lead a healthy financial life, or just answer random questions about financial markets or economics. 
-      </p>
-      <p>
-        If you want someone to take a less partial look at an investment portfolio or product that you've been offered I'd be happy to do so. Odds are, my advice will be that you shouldn't buy it.
-      </p>
-    </div>
-
-	---->
-
-	<!----
-    <div id="number3" class="basic" class="container-fluid">
-      <h3>Fun</h3>
-      <p>
-        I have a bunch of hobbies that I try to keep track of at the less professional part of this site where I play around with formatting and different tools for building websites. You can get to that part with this <a href="v1/home.html">link</a>.
-      </p>
-      <p>
-      I've recently started trying to write thoughts or reviews of the books I read. I've almost always got plans for improving whatever bike I'm currently riding. I've played rugby in the past, although I'm pretty beaten up and I'm currently focused on fixing some broke body parts focusing on core strength and flexibility.  I'm also planning to write up a few projects I've finished, building a wodden work bench, repairing a yardsale Kitchenaid from the 1980's, and some other things as well but don't hold your breath. 
-      </p>
-    </div>
-
----->
-
-<!----
-    <div id = "number4" class="basic" class="container-fluid">
-      <h3>Education</h3>
-      <h4>The Centre for Advanced Spatial Analysis </h4>
-      <h5>The Bartlett Faculty of the Built Environment: University College London: 2018-2019</h5>
-      <p><a href="https://www.ucl.ac.uk/bartlett/casa/">CASA </a> does a bunch of really cool stuff. I studied how modern quantitative methods from Data Science, Computer Science, Mathematics, Physics, and Geography can 
-      inform modern cities, their citizens, their planning, and their something else.
-       </p>
-
-      <h4>
-        Macalester College
-      </h4>
-      <h5>
-        St Paul, MN: 2009-2013
-      </h5>
-      <p> 
-      I studied economics and chinese. It was really hard. I spent a lot of time with the rugby team, worked a few different student jobs and didn't get nearly enough sleep. 
-      </p>
-    </div>
----->
-
-    <!-- <div id="number5" class="basic">
-      <p>Life</p>
-    </div> -->
-
-	<!---
-    <div id="number6" class="basic">
-      <h3>Blog</h3>
-      <p>I write some book/movie reviews and some random thoughts at my blog <a href="/v1/blog.html">here</a>
-      </p>
-    </div>
-	--->
-
 	      <!-- ------------------------------- start Bottom Bar --------------------------------- -->
     <div class="bottombar">
-	  <h4 style="color:#f4c430" class="center">Links</h4>
       <ul>
         <li> <a href="https://stackoverflow.com/users/3033634/hugh-kelley"><img src="https://i.imgur.com/zUgefjp.png" alt="S/O" height = '20px'></a></li>
         <li><a href="https://github.com/HughKelley/HughKelley.github.io"><img src="https://i.imgur.com/zYDMLAt.png" alt="github logo" height="20px"></a></li>
@@ -176,8 +80,6 @@
       </ul>
     </div>
     <!-- ------------------------------- end Bottom Bar ---------------------------------     -->
-	
-
     </div>
     </div>
   </BODY>
