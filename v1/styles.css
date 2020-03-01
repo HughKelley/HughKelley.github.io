@@ -19,6 +19,22 @@ body {
   /*overflow-x:hidden;*/
 }
 
+.basic {   /* border: 5px solid;
+            border-radius:15px;
+            border-color:grey;*/
+            /*overrides the body color:white below*/
+            outline-style: solid;
+            outline-color:#800000;
+            /* outline goes around the section divs*/
+            margin:10px;
+            padding:10px;
+            overflow:hidden;
+            background:#facfbf;
+            /*height:500px;*/
+            color:black;
+        }
+
+
 /*html,body
 {
     width: 100%;
@@ -44,6 +60,26 @@ body {
   height: calc(100% - 100px);
   background-color:#800000;
 }
+
+.header-section {   background:#800000;
+                    overflow:hidden;
+                }
+
+
+
+.content-frame-out{
+    max-width:1300px;
+    margin-left:auto;
+    margin-right:auto;
+    background:#800000;
+}
+
+.content-frame-in{ max-width:1150px;
+                    margin-left:auto;
+                    margin-right:auto; }
+
+.basic > h3{font-size:large;}
+.basic > h4{font-size:medium;}
 
 /*this is behind the content section, not visible*/
 
@@ -93,7 +129,8 @@ body {
 .bottombar{
   width:100%;
   max-width:500px;
-  height:100px;
+  /*height:150px;*/
+  padding-top:20px;
   background-color:#800000;
   /*float:left;*/
   margin:auto;
@@ -128,3 +165,23 @@ p {
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 }*/
+
+
+
+
+.about{ vertical-align:middle;
+        width:70%;
+        margin-left:20px;
+        float:left;
+        color:#ffffff;
+      }
+
+
+.exp{ vertical-align:middle;
+        float:left;
+        color:#ffffff;
+    }
+
+
+
+
