@@ -126,6 +126,20 @@ body {
   text-decoration:none;
 }
 
+.topbar{
+  width:100%;
+  max-width:500px;
+  /*height:150px;*/
+  padding-top:20px;
+  background-color:#800000;
+  /*float:left;*/
+  margin:auto;
+}
+
+.topbar > ul{display:table;width:95%;}
+.topbar > ul > li{list-style:none;margin:0;padding:0;display:table-cell;}
+
+
 .bottombar{
   width:100%;
   max-width:500px;
@@ -151,7 +165,7 @@ a {
 }
 
 p {
-  padding-top: 25px;
+  padding-top: 5px;
   text-align: center;
 }
 
